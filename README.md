@@ -3,6 +3,9 @@ Highly Efficient mining pool for Coins based on KawPoW algo!
 
 This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www.hivecoin.org) for more information
 
+### Example site
+[Hiveminer.eu](http://hiveminer.eu/stats/hivecoin)
+
 -------
 ### Screenshots
 #### Home<br />
