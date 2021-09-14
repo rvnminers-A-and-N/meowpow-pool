@@ -1,5 +1,7 @@
-# NOMP KawPoW Algorithm Pool
+# NOMP KawPoW Algorithm Pool -HiveCoin
 Highly Efficient mining pool for Coins based on KawPoW algo!
+
+This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www.hivecoin.org) for more information
 
 -------
 ### Screenshots
