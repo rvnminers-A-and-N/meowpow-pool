@@ -24,9 +24,9 @@ This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www
 ### Node Open Mining Portal consists of 3 main modules:
 | Project | Link |
 | ------------- | ------------- |
-| [KawPoWNOMP](https://github.com/Satoex/kawpow-pool) | https://github.com/Satoex/kawpow-pool|
-| [Stratum Pool](https://github.com/Satoex/kawpow-stratum-pool) | https://github.com/Satoex/kawpow-stratum-pool |
-| [Node Multihashing](https://github.com/Satoex/node-multi-hashing) | https://github.com/Satoex/node-multi-hashing |
+| [KawPoWNOMP](https://github.com/HiveProject2021/kawpow-pool) | https://github.com/HiveProject2021/kawpow-pool |
+| [Stratum Pool](https://github.com/dr4mohamed/kawpow-stratum-pool-1.git) | https://github.com/dr4mohamed/kawpow-stratum-pool-1.git |
+| [Node Multihashing](https://github.com/dr4mohamed/node-multi-hashing.git) | https://github.com/dr4mohamed/node-multi-hashing.git |
 
 -------
 ### Requirements
@@ -41,40 +41,38 @@ This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www
 
 -------
 
-### Install RavenCoin Daemon
+### Install HiveCoin Daemon
 
     adduser pool
     usermod -aG sudo pool
     su - pool
     sudo apt install wget
-    wget https://github.com/RavenProject/Ravencoin/releases/download/v4.3.1/raven-4.3.1.0-x86_64-linux-gnu.tar.gz
-    tar -xf raven-4.3.1.0-x86_64-linux-gnu.tar.gz
-    rm raven*gz
-    cd raven-4.3.1.0/bin
-    mkdir -p ~/.raven/
-    touch ~/.raven/raven.conf
-    echo "rpcuser=user1" > ~/.raven/raven.conf
-    echo "rpcpassword=pass1" >> ~/.raven/raven.conf
-    echo "prune=550" >> ~/.raven/raven.conf
-    echo "daemon=1" >> ~/.raven/raven.conf
-    ./ravend
-    ./raven-cli getnewaddress
+    wget https://github.com/HiveProject2021/Hivecoin/releases/download/4.2.3.5.2/hivecoin4.3.2.5.deb
+    sudo dpkg -i hivecoin4.3.2.5.deb
+    mkdir -p ~/.hive/
+    touch ~/.hive/hive.conf
+    echo "rpcuser=user1" > ~/.hive/hive.conf
+    echo "rpcpassword=pass1" >> ~/.hive/hive.conf
+    echo "prune=550" >> ~/.hive/hive.conf
+    echo "daemon=1" >> ~/.hive/hive.conf
+    ./hived
+    ./hive-cli getnewaddress
 
-Example output: RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk - it is the address of your pool, you need to remember it and specify it in the configuration file pool_configs/ravencoin.json.
+Example output: HNRMPAYzdBHGWgK7CjSFByuUcufCHSST7r - it is the address of your pool, you need to remember it and specify it in the configuration file pool_configs/hivecoin.json.
     
-    ./raven-cli getaddressesbyaccount ""
+    ./hive-cli getaddressesbyaccount ""
     
 Information about pool wallet address.
     
-    ./raven-cli getwalletinfo
+    ./hive-cli getwalletinfo
     
 Get more information.
 
-    ./raven-cli getblockcount
+    ./hive-cli getblockcount
     
 Information about synchronization of blocks in the main chain.
 
-    ./raven-cli help
+    ./hive-cli help
 Other helpfull commands.
 
 -------
@@ -84,7 +82,7 @@ Other helpfull commands.
     sudo apt install git -y
     cd ~
     git config --global http.https://gopkg.in.followRedirects true
-    git clone https://github.com/Satoex/kawpow-pool.git
+    git clone https://github.com/HiveProject2021/kawpow-pool
     cd kawpow-pool/
     ./install.sh
 
@@ -99,7 +97,7 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
 ```javascript
 {
     
-    "poolname": "KawPoW Coins Pool",
+    "poolname": "Hive Coin Pool",
     
     "devmode": false,
     "devmodePayMinimim": 0.25,
@@ -109,25 +107,26 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
     "anonymizeips": true,
     "ipv4bits": 16,
     "ipv6bits": 16,
+    "poolwarningmsg": "",
     
-     "defaultCoin": "ravencoin",
+    "defaultCoin": "hivecoin",
     
-    "poollogo": "https://zelcash.github.io/zeltrez.io/images/logos/Ravencoin.svg",
+    "poollogo": "/static/icons/hivecoin.png",
     
-    "discordtwitterfacebook": "Join our #mining channel on Discord: <a href='https://discord.gg/vzcbVNW' target='_blank'>https://discord.gg/vzcbVNW</a>",
+    "discordtwitterfacebook": "",
     
-    "pagetitle": "KawPoW Algorithm Pool - 0.5% Fees Promo - Run by professionals",
-    "pageauthor": "My Name Is...",
-    "pagedesc": "A reliable, low fee, easy to use mining pool for KawPoW algorithm coins! Get started mining today!",
-    "pagekeywds": "GPU,CPU,Hash,Hashrate,Cryptocurrency,Crypto,Mining,Pool,Ravencoin,Zelantus,Sato,Easy,Simple,How,To",
+    "pagetitle": "Hive Coin Pool - 0% Fees Promo",
+    "pageauthor": "Hive project",
+    "pagedesc": "A reliable, 0% fee, easy to use mining pool for cryptocurrency! No matter your experience with mining cryptocurrency, we make it easy! Get started mining today!",
+    "pagekeywds": "GPU,CPU,Hash,Hashrate,Cryptocurrency,Crypto,Mining,Pool,Bitcoin,Hive,Hivecoin,Wavi,Wavicoin,Dixicoin,Dixi,QBic,QBicCoin,Easy,Simple,How,To",
 
-    "btcdonations": "1GXEm97T5iXAeYHBj2GuL3TKKRpkNas4Qt",
-    "ltcdonations": "LWBZWLmjqeQFnMqS9NctcdSx3TEYHyzfGz",
-    "rvndonations": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk",
+    "btcdonations": "",
+    "ltcdonations": "",
+    "ethdonations": "",
 
     "logger" : {
         "level" : "debug",
-        "file" : "/home/pool/nomp-kawpow-pool/logs/nomp_debug.log"
+        "file" : "./logs/nomp_debug.log"
     },
 
     "cliHost": "127.0.0.1",
@@ -139,8 +138,8 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
     },
 
     "defaultPoolConfigs": {
-        "blockRefreshInterval": 400,
-        "jobRebroadcastTimeout": 30,
+        "blockRefreshInterval": 1000,
+        "jobRebroadcastTimeout": 55,
         "connectionTimeout": 600,
         "emitInvalidBlockHashes": false,
         "validateWorkerUsername": true,
@@ -163,19 +162,19 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
         "sslenabled": false,
         "sslforced": false,
         "host": "0.0.0.0",
-        "port": 80,
+        "port": 8080,
         "sslport": 443,
-        "sslkey": "/home/pool/nomp-kawpow-pool/certs/privkey.pem",
-        "sslcert": "/home/pool/nomp-kawpow-pool/certs/fullchain.pem",
-        "stratumHost": "192.168.0.200",
+        "sslkey": "~/nomp-kawpow-pool/certs/privkey.pem",
+        "sslcert": "~/nomp-kawpow-pool/certs/fullchain.pem",
+        "stratumHost": "192.168.100.105",
         "stats": {
-            "updateInterval": 15,
-            "historicalRetention": 28800,
+            "updateInterval": 30,
+            "historicalRetention": 172800,
             "hashrateWindow": 600
         },
         "adminCenter": {
             "enabled": false,
-            "password": "NOT_WORKING_YET"
+            "password": "NOT_WORKING_YET_:P_LESHACAT_CAN_DO_ADMIN_PANEL_FUNCTIONALITY_TOO"
         }
     },
 
@@ -246,94 +245,140 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
     }
 
 }
-
 ```
+Create a pool config for you coins:
+    
+    cp pool_configs/hivecoin_example.json pool_configs/hivecoin.json
 
-Change "address": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk", to your pool created wallet address in file ravencoin.json:
+Change "address": "HQWTiHTAUVxUkrV72bqW5Tfrpgbzkde1Q4", to your pool created wallet address in file ravencoin.json:
 
-    cd ~/nomp-kawpow-pool/pool_configs
-    nano ravencoin.json
+    cd pool_configs
+    nano hivecoin.json
 
 ```javascript
 {
     "enabled": true,
-    "coin": "ravencoin.json",
+    "coin": "hivecoin.json",
 
-    "address": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk",
+    "address": "HQWTiHTAUVxUkrV72bqW5Tfrpgbzkde1Q4",
     
-    "donateaddress": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk",
+    "donateaddress": "HQWTiHTAUVxUkrV72bqW5Tfrpgbzkde1Q4",
 
     "rewardRecipients": {
-        "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk": 0.5
+	    "HNRMPAYzdBHGWgK7CjSFByuUcufCHSST7r":0.5
     },
 
     "paymentProcessing": {
         "enabled": true,
         "schema": "PROP",
         "paymentInterval": 300,
-        "minimumPayment": 1,
-        "maxBlocksPerPayment": 10,
+        "minimumPayment": 5,
+        "maxBlocksPerPayment": 50000,
         "minConf": 30,
         "coinPrecision": 8,
         "daemon": {
             "host": "127.0.0.1",
-            "port": 8766,
+            "port": 9766,
             "user": "user1",
             "password": "pass1"
         }
     },
 
     "ports": {
-	"10008": {
-            "diff": 0.05,
+		"10001": {
+            "diff": 0.001,
     	    "varDiff": {
-    	        "minDiff": 0.025,
-    	        "maxDiff": 1024,
+    	        "minDiff": 0.001,
+    	        "maxDiff": 32,
     	        "targetTime": 10,
     	        "retargetTime": 60,
     	        "variancePercent": 30,
-    		"maxJump": 25
+    		    "maxJump": 25
     	    }
         },
-        "10016": {
-	    "diff": 0.10,
-            "varDiff": {
-                "minDiff": 0.05,
-                "maxDiff": 1024,
+		"10002": {
+            "diff": 0.01,
+    	    "varDiff": {
+    	        "minDiff": 0.01,
+    	        "maxDiff": 32,
     	        "targetTime": 10,
     	        "retargetTime": 60,
     	        "variancePercent": 30,
-		"maxJump": 25
-            }
-        },
-        "10032": {
-	    "diff": 0.20,
-            "varDiff": {
-    		"minDiff": 0.10,
-    		"maxDiff": 1024,
-    	        "targetTime": 10,
-    	        "retargetTime": 60,
-    	        "variancePercent": 30,
-    		"maxJump": 50
+    		    "maxJump": 25
     	    }
         },
-	"10256": {
-	    "diff": 1024000000,
-            "varDiff": {
-                "minDiff": 1024000000,
-                "maxDiff": 20480000000,
+		"10003": {
+            "diff": 0.1,
+    	    "varDiff": {
+    	        "minDiff": 0.1,
+    	        "maxDiff": 32,
     	        "targetTime": 10,
     	        "retargetTime": 60,
     	        "variancePercent": 30,
-		"maxJump": 25
-            }
+    		    "maxJump": 25
+    	    }
+        },
+		"10004": {
+            "diff": 0.5,
+    	    "varDiff": {
+    	        "minDiff": 0.5,
+    	        "maxDiff": 32,
+    	        "targetTime": 10,
+    	        "retargetTime": 60,
+    	        "variancePercent": 30,
+    		    "maxJump": 25
+    	    }
+        },
+		"10005": {
+            "diff": 1,
+    	    "varDiff": {
+    	        "minDiff": 1,
+    	        "maxDiff": 32,
+    	        "targetTime": 10,
+    	        "retargetTime": 60,
+    	        "variancePercent": 30,
+    		    "maxJump": 25
+    	    }
+        },
+		"10006": {
+            "diff": 2,
+    	    "varDiff": {
+    	        "minDiff": 2,
+    	        "maxDiff": 32,
+    	        "targetTime": 10,
+    	        "retargetTime": 60,
+    	        "variancePercent": 30,
+    		    "maxJump": 25
+    	    }
+        },
+		"10007": {
+            "diff": 4,
+    	    "varDiff": {
+    	        "minDiff": 4,
+    	        "maxDiff": 64,
+    	        "targetTime": 10,
+    	        "retargetTime": 60,
+    	        "variancePercent": 30,
+    		    "maxJump": 25
+    	    }
+        },
+		"10008": {
+            "diff": 0.5,
+    	    "varDiff": {
+    	        "minDiff": 0.5,
+    	        "maxDiff": 32,
+    	        "targetTime": 10,
+    	        "retargetTime": 60,
+    	        "variancePercent": 30,
+    		    "maxJump": 25
+    	    }
         }
     },
 
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 8766,
+            "port": 9766,
             "user": "user1",
             "password": "pass1"
         }
@@ -342,7 +387,7 @@ Change "address": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk", to your pool created wal
     "p2p": {
         "enabled": false,
         "host": "127.0.0.1",
-        "port": 8767,
+        "port": 19333,
         "disableTransactions": true
     },
 
@@ -352,7 +397,7 @@ Change "address": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk", to your pool created wal
         "port": 3306,
         "user": "me",
         "password": "mypass",
-        "database": "rvn",
+        "database": "ltc",
         "checkPassword": true,
         "autoCreateWorker": false
     },
@@ -362,7 +407,7 @@ Change "address": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk", to your pool created wal
         "host": "127.0.0.1",
         "user": "",
         "pass": "",
-        "database": "rvn",
+        "database": "ltc",
         "authMechanism": "DEFAULT"
     }
 
@@ -372,16 +417,5 @@ Change "address": "RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk", to your pool created wal
 
 ### Run Pool
     
-    cd ~/nomp-kawpow-pool
-    ./pool-start.sh
+    node ./init.js
 
-### Donates for developers KawPoWNOMP
-
-
-BTC: 1GXEm97T5iXAeYHBj2GuL3TKKRpkNas4Qt
-
-LTC: LWBZWLmjqeQFnMqS9NctcdSx3TEYHyzfGz
-
-RVN: RNs3ne88DoNEnXFTqUrj6zrYejeQpcj4jk
-    
--------
