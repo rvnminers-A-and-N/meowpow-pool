@@ -1,0 +1,10 @@
+{
+    "name": "hivecoin",    
+    "symbol": "HVN",    
+    "algorithm": "kawpow",
+    
+    "blockTime": 60,
+    "blockChange": 1
+    
+}
+
