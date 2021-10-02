@@ -248,9 +248,9 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
 ```
 Create a pool config for you coins:
     
-    cp pool_configs/hivecoin_example.json pool_configs/hivecoin.json
+    mv pool_configs/hivecoin_example.json pool_configs/hivecoin.json
 
-Change "address": "HQWTiHTAUVxUkrV72bqW5Tfrpgbzkde1Q4", to your pool created wallet address in file ravencoin.json:
+Change "address": "HQWTiHTAUVxUkrV72bqW5Tfrpgbzkde1Q4", to your pool created wallet address in file hivecoin.json:
 
     cd pool_configs
     nano hivecoin.json
@@ -419,3 +419,7 @@ Change "address": "HQWTiHTAUVxUkrV72bqW5Tfrpgbzkde1Q4", to your pool created wal
     
     node ./init.js
 
+### About  
+
+If you have any questions or have interested to get involved into this project, please join us Discord:
+[https://discord.gg/BBQnctGdHK](https://discord.gg/BBQnctGdHK)

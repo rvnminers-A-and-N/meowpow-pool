@@ -1,6 +1,6 @@
 {
     "name": "hivecoin",    
-    "symbol": "HVN",    
+    "symbol": "HVQ",    
     "algorithm": "kawpow",
     
     "blockTime": 60,
