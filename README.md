@@ -25,7 +25,7 @@ This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www
 | Project | Link |
 | ------------- | ------------- |
 | [KawPoWNOMP](https://github.com/HiveProject2021/kawpow-pool) | https://github.com/HiveProject2021/kawpow-pool |
-| [Stratum Pool](https://github.com/dr4mohamed/kawpow-stratum-pool-1.git) | https://github.com/dr4mohamed/kawpow-stratum-pool-1.git |
+| [Stratum Pool](https://github.com/tweetyf/kawpow-stratum-pool.git) | https://github.com/tweetyf/kawpow-stratum-pool.git |
 | [Node Multihashing](https://github.com/dr4mohamed/node-multi-hashing.git) | https://github.com/dr4mohamed/node-multi-hashing.git |
 
 -------
