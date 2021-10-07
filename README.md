@@ -43,8 +43,8 @@ This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www
 
 ### Install HiveCoin Daemon
 
-    adduser pool
-    usermod -aG sudo pool
+    sudo adduser pool
+    sudo usermod -aG sudo pool
     su - pool
     sudo apt install wget
     wget https://github.com/HiveProject2021/Hivecoin/releases/download/4.2.3.5.2/hivecoin4.3.2.5.deb
@@ -55,24 +55,24 @@ This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www
     echo "rpcpassword=pass1" >> ~/.hive/hive.conf
     echo "prune=550" >> ~/.hive/hive.conf
     echo "daemon=1" >> ~/.hive/hive.conf
-    ./hived
-    ./hive-cli getnewaddress
+    hived
+    hive-cli getnewaddress
 
 Example output: HNRMPAYzdBHGWgK7CjSFByuUcufCHSST7r - it is the address of your pool, you need to remember it and specify it in the configuration file pool_configs/hivecoin.json.
     
-    ./hive-cli getaddressesbyaccount ""
+    hive-cli getaddressesbyaccount ""
     
 Information about pool wallet address.
     
-    ./hive-cli getwalletinfo
+    hive-cli getwalletinfo
     
 Get more information.
 
-    ./hive-cli getblockcount
+    hive-cli getblockcount
     
 Information about synchronization of blocks in the main chain.
 
-    ./hive-cli help
+    hive-cli help
 Other helpfull commands.
 
 -------
