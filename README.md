@@ -47,8 +47,8 @@ This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www
     sudo usermod -aG sudo pool
     su - pool
     sudo apt install wget
-    wget https://github.com/HiveProject2021/Hivecoin/releases/download/4.2.3.5.2/hivecoin4.3.2.5.deb
-    sudo dpkg -i hivecoin4.3.2.5.deb
+    wget https://github.com/HiveProject2021/Hivecoin/releases/download/4.4.2.1/hivecoin-4.4.2.1.deb
+    sudo dpkg -i hivecoin-4.4.2.1.deb
     mkdir -p ~/.hive/
     touch ~/.hive/hive.conf
     echo "rpcuser=user1" > ~/.hive/hive.conf
