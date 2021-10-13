@@ -12,7 +12,7 @@ These 2 values are in the RPC data when the pool request block template, and whe
     strCommunityAutonomousAddressHash
     CommunityAutonomousValue
 
-When the blockchain recevie a new block it will check those 2 values, note that "strCommunityAutonomousAddressHash" is Base58 of "CommunityAutonomousAddress", if the values are missing or wrong then the network will reject new block request, therefor if any third-part pool wants to implement Hivecoin must do some tweak with their rpc data.
+When the blockchain receive a new block it will check those 2 values, note that "strCommunityAutonomousAddressHash" is Base58 of "CommunityAutonomousAddress", if the values are missing or wrong then the network will reject new block request, therefor if any third-part pool wants to implement Hivecoin must do some tweak with their rpc data.
 
 ## For NOMP based systems
 
@@ -38,4 +38,4 @@ The main modification in nodejs project [https://github.com/tweetyf/kawpow-strat
         Math.floor(rpcData.CommunityAutonomousValue)
     );
 
-Other platform can use the as reference.
+Other platform can use the code as reference.
