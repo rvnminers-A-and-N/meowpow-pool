@@ -2,7 +2,7 @@
 
 ## The theory
 
-Hivecoin has a feature of remaining 10% of coins for community develpoment according to the [Whitepater](https://github.com/HiveProject2021/Hivecoin/blob/main/whitepaper/README.md), to implement this, HiveCoin add 2 additional value when submit new block to the main network:
+Hivecoin has a feature of remaining 10% of coins for community develpoment according to the [Whitepaper](https://github.com/HiveProject2021/Hivecoin/blob/main/whitepaper/README.md), to implement this, HiveCoin add 2 additional value when submit new block to the main network:
 
     "CommunityAutonomousAddress": "HCAo9dVTEo8EE1UASQ9cSW1DuU5aDo39Ph",
     "CommunityAutonomousValue": 50000000000,
@@ -16,7 +16,7 @@ When the blockchain receive a new block it will check those 2 values, note that 
 
 ## For NOMP based systems
 
-Many pools are NOMP based systems, NOMP is a nodejs based system witch has seperate stratum protocol as different project, you simply need to replace stratum lib in dependency, located in packages.json
+Many pools are NOMP based systems, NOMP is a nodejs based system witch has separate stratum protocol as a different project, you simply need to replace stratum lib in dependency, located in packages.json
 
     "dependencies": {
         "stratum-pool": "git+https://github.com/tweetyf/kawpow-stratum-pool.git",
