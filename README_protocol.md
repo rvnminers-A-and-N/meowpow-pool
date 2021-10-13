@@ -1,6 +1,6 @@
 # HOW TO ADJUST THIRD-PART POOL SOFTWARE TO HIVECOIN
 
-## The threoy
+## The theory
 
 Hivecoin has a feature of remaining 10% of coins for community develpoment according to the [Whitepater](https://github.com/HiveProject2021/Hivecoin/blob/main/whitepaper/README.md), to implement this, HiveCoin add 2 additional value when submit new block to the main network:
 
