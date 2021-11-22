@@ -26,7 +26,7 @@ This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www
 | ------------- | ------------- |
 | [KawPoWNOMP](https://github.com/HiveProject2021/kawpow-pool) | https://github.com/HiveProject2021/kawpow-pool |
 | [Stratum Pool](https://github.com/tweetyf/kawpow-stratum-pool.git) | https://github.com/tweetyf/kawpow-stratum-pool.git |
-| [Node Multihashing](https://github.com/dr4mohamed/node-multi-hashing.git) | https://github.com/dr4mohamed/node-multi-hashing.git |
+| [Node Multihashing](https://github.com/zone117x/node-multi-hashing.git) | https://github.com/zone117x/node-multi-hashing.git |
 
 -------
 ### Requirements
@@ -34,7 +34,7 @@ This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www
 * Ubuntu Server 18.04.* LTS
 * Coin daemon
 * Node Version Manager
-* Node 8.1.4
+* Node 12.13.0
 * Process Manager 2 / pm2
 * Redis Server
 * ntp
