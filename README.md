@@ -1,31 +1,31 @@
-# NOMP KawPoW Algorithm Pool -HiveCoin
-Highly Efficient mining pool for Coins based on KawPoW algo!
+# NOMP MeowPoW Algorithm Pool -MeowCoin
+Highly Efficient mining pool for Coins based on MeowPoW algo!
 
-This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www.hivecoin.org) for more information
+This is opensource mining pool for MeowCoin, Please visit [MeowCoin](https://www.meowcoin.org) for more information
 
 ### Example site
-[Hiveminer.eu](http://hiveminer.eu/stats/hivecoin)
+[Meowminer.eu](http://meowminer.eu/stats/meowcoin)
 
 -------
 ### Screenshots
 #### Home<br />
-![Home](https://raw.githubusercontent.com/Satoex/kawpow-pool/master/docs/frontend/home.png)
+![Home](https://raw.githubusercontent.com/rvnminers-A-and-N/meowpow-pool/master/docs/frontend/home.png)
 
 #### Pool Stats<br />
-![Pool Stats](https://raw.githubusercontent.com/Satoex/kawpow-pool/master/docs/frontend/poolstats.png)<br /><br />
+![Pool Stats](https://raw.githubusercontent.com/rvnminers-A-and-N/meowpow-pool/master/docs/frontend/poolstats.png)<br /><br />
 
 #### Miner Stats<br />
-![Miner Stats](https://raw.githubusercontent.com/Satoex/kawpow-pool/master/docs/frontend/minerstats.png)<br /><br />
+![Miner Stats](https://raw.githubusercontent.com/rvnminers-A-and-N/meowpow-pool/master/docs/frontend/minerstats.png)<br /><br />
 
 #### Payments<br />
-![Payments](https://raw.githubusercontent.com/Satoex/kawpow-pool/master/docs/frontend/payments.png)<br /><br />
+![Payments](https://raw.githubusercontent.com/rvnminers-A-and-N/meowpow-pool/master/docs/frontend/payments.png)<br /><br />
 
 -------
 ### Node Open Mining Portal consists of 3 main modules:
 | Project | Link |
 | ------------- | ------------- |
-| [KawPoWNOMP](https://github.com/HiveProject2021/kawpow-pool) | https://github.com/HiveProject2021/kawpow-pool |
-| [Stratum Pool](https://github.com/tweetyf/kawpow-stratum-pool.git) | https://github.com/tweetyf/kawpow-stratum-pool.git |
+| [MeowPoWNOMP](https://github.com/rvnminers-A-and-N/meowpow-pool) | https://github.com/rvnminers-A-and-N/meowpow-pool |
+| [Stratum Pool](https://github.com/tweetyf/meowpow-stratum-pool.git) | https://github.com/tweetyf/meowpow-stratum-pool.git |
 | [Node Multihashing](https://github.com/zone117x/node-multi-hashing.git) | https://github.com/zone117x/node-multi-hashing.git |
 
 -------
@@ -41,38 +41,57 @@ This is opensource mining pool for HiveCoin, Please visit [HiveCoin](https://www
 
 -------
 
-### Install HiveCoin Daemon
+### Install MeowCoin Daemon
 
-    sudo adduser pool
-    sudo usermod -aG sudo pool
+    First.....
+
+    adduser pool
+    usermod -aG sudo pool
     su - pool
     sudo apt install wget
-    wget https://github.com/HiveProject2021/Hivecoin/releases/download/4.4.2.1/hivecoin-4.4.2.1.deb
-    sudo dpkg -i hivecoin-4.4.2.1.deb
-    mkdir -p ~/.hive/
-    touch ~/.hive/hive.conf
-    echo "rpcuser=user1" > ~/.hive/hive.conf
-    echo "rpcpassword=pass1" >> ~/.hive/hive.conf
-    echo "prune=550" >> ~/.hive/hive.conf
-    echo "daemon=1" >> ~/.hive/hive.conf
-    hived
-    hive-cli getnewaddress
 
-Example output: HNRMPAYzdBHGWgK7CjSFByuUcufCHSST7r - it is the address of your pool, you need to remember it and specify it in the configuration file pool_configs/hivecoin.json.
+    Then.....
+
+    wget https://github.com/JustAResearcher/Meowcoin/releases/download/v2.0.0/meowcoin-2.0.0-x86_64-linux-gnu.zip
+
+    unzip meowcoin-2.0.0-x86_64-linux-gnu.zip
+    rm meowcoin*zip // this step is optional //
+
+    Or.....
+
+    wget https://github.com/JustAResearcher/Meowcoin/releases/download/v2.0.0/meowcoin-2.0.0-x86_64-linux-gnu.zip
+
+    tar -xvf meowcoin-2.0.0-x86_64-linux-gnu.zip
+    rm raven*gz // this step is optional //
+
+    Then.....
+
+    cd linux
+    cd raven-4.3.2.1/bin
+    mkdir -p ~/.raven/
+    touch ~/.raven/raven.conf
+    echo "rpcuser=user1" > ~/.raven/raven.conf
+    echo "rpcpassword=pass1" >> ~/.raven/raven.conf
+    echo "listen=1" >> ~/.raven/raven.conf
+    echo "daemon=1" >> ~/.raven/raven.conf
+    ./ravend
+    ./raven-cli getnewaddress
+
+Example output: HNRMPAYzdBHGWgK7CjSFByuUcufCHSST7r - it is the address of your pool, you need to remember it and specify it in the configuration file pool_configs/meowcoin.json.
     
-    hive-cli getaddressesbyaccount ""
+    meow-cli getaddressesbyaccount ""
     
 Information about pool wallet address.
     
-    hive-cli getwalletinfo
+    meow-cli getwalletinfo
     
 Get more information.
 
-    hive-cli getblockcount
+    meow-cli getblockcount
     
 Information about synchronization of blocks in the main chain.
 
-    hive-cli help
+    meow-cli help
 Other helpfull commands.
 
 -------
@@ -82,8 +101,8 @@ Other helpfull commands.
     sudo apt install git -y
     cd ~
     git config --global http.https://gopkg.in.followRedirects true
-    git clone https://github.com/HiveProject2021/kawpow-pool
-    cd kawpow-pool/
+    git clone https://github.com/rvnminers-A-and-N/meowpow-pool
+    cd meowpow-pool/
     ./install.sh
 
 -------
@@ -91,13 +110,13 @@ Other helpfull commands.
 
 Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
 
-    cd ~/kawpow-pool
+    cd ~/meowpow-pool
     nano config.json
 
 ```javascript
 {
     
-    "poolname": "Hive Coin Pool",
+    "poolname": "Meow Coin Pool",
     
     "devmode": false,
     "devmodePayMinimim": 0.25,
@@ -109,16 +128,16 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
     "ipv6bits": 16,
     "poolwarningmsg": "",
     
-    "defaultCoin": "hivecoin",
+    "defaultCoin": "meowcoin",
     
-    "poollogo": "/static/icons/hivecoin.png",
+    "poollogo": "/static/icons/meowcoin.png",
     
     "discordtwitterfacebook": "",
     
-    "pagetitle": "Hive Coin Pool - 0% Fees Promo",
-    "pageauthor": "Hive project",
+    "pagetitle": "Meow Coin Pool - 0% Fees Promo",
+    "pageauthor": "Meow project",
     "pagedesc": "A reliable, 0% fee, easy to use mining pool for cryptocurrency! No matter your experience with mining cryptocurrency, we make it easy! Get started mining today!",
-    "pagekeywds": "GPU,CPU,Hash,Hashrate,Cryptocurrency,Crypto,Mining,Pool,Bitcoin,Hive,Hivecoin,Wavi,Wavicoin,Dixicoin,Dixi,QBic,QBicCoin,Easy,Simple,How,To",
+    "pagekeywds": "GPU,CPU,Hash,Hashrate,Cryptocurrency,Crypto,Mining,Pool,Bitcoin,Meow,Meowcoin,Wavi,Wavicoin,Dixicoin,Dixi,QBic,QBicCoin,Easy,Simple,How,To",
 
     "btcdonations": "",
     "ltcdonations": "",
@@ -164,8 +183,8 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
         "host": "0.0.0.0",
         "port": 8080,
         "sslport": 443,
-        "sslkey": "~/nomp-kawpow-pool/certs/privkey.pem",
-        "sslcert": "~/nomp-kawpow-pool/certs/fullchain.pem",
+        "sslkey": "~/meowpow-pool/certs/privkey.pem",
+        "sslcert": "~/meowpow-pool/certs/fullchain.pem",
         "stratumHost": "192.168.100.105",
         "stats": {
             "updateInterval": 30,
@@ -248,17 +267,17 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
 ```
 Create a pool config for you coins:
     
-    mv pool_configs/hivecoin_example.json pool_configs/hivecoin.json
+    mv pool_configs/meowcoin_example.json pool_configs/meowcoin.json
 
-Change "address": "HQWTiHTAUVxUkrV72bqW5Tfrpgbzkde1Q4", to your pool created wallet address in file hivecoin.json:
+Change "address": "HQWTiHTAUVxUkrV72bqW5Tfrpgbzkde1Q4", to your pool created wallet address in file meowcoin.json:
 
     cd pool_configs
-    nano hivecoin.json
+    nano meowcoin.json
 
 ```javascript
 {
     "enabled": true,
-    "coin": "hivecoin.json",
+    "coin": "meowcoin.json",
 
     "address": "HQWTiHTAUVxUkrV72bqW5Tfrpgbzkde1Q4",
     

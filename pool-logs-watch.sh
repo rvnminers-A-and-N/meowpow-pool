@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo ""
-echo "KawPoW Pool Start Watching Logs..."
+echo "MeowPoW Pool Start Watching Logs..."
 echo ""
 
 source ~/.bashrc

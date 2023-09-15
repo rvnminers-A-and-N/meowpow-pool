@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo ""
-echo "KawPoW Pool Restarting..."
+echo "MeowPoW Pool Restarting..."
 echo ""
 
 source ~/.bashrc
@@ -23,7 +23,7 @@ renice -n -18 -p $(pidof node)
 renice -n -18 -p $(pidof nodejs)
 
 echo ""
-echo "KawPoW Pool Restarted!"
+echo "MeowPoW Pool Restarted!"
 echo ""
 
 exit 0

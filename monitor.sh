@@ -23,13 +23,13 @@ check_process() {
 # supervisor process   
 while [ 1 ]  
 do   
-    #1. check hived
-    p_name="hived"
+    #1. check meowcoind
+    p_name="meowcoind"
     ch_num=$(check_process $p_name)
     if [ $ch_num -eq 0 ]; then
-        log "process hived is dead, restarting..."
+        log "process meowcoind is dead, restarting..."
         log "$(pwd)"
-        hived
+        meowcoind
 	sleep 1
     fi
     # 2. check node

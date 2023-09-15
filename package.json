@@ -1,7 +1,7 @@
 {
-    "name": "KawPoWNOMP",
+    "name": "MeowPoWNOMP",
     "version": "1.1.5",
-    "description": "An extremely efficient, highly scalable, KawPoW algorithm mining pool",
+    "description": "An extremely efficient, highly scalable, MeowPoW algorithm mining pool",
     "keywords": [
         "stratum",
         "mining",
@@ -9,10 +9,11 @@
         "server",
         "poolserver",
         "Ravencoin",
+        "Meowcoin",
         "Sato",
         "Zelantus",
         "Splendidcoin",
-        "KawPoW"
+        "MeowPoW"
     ],
     "license": "GPL-2.0",
     "author": "dr4mohamed",
@@ -30,7 +31,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Satoex/kawpow-pool.git"
+        "url": "https://github.com/Satoex/meowpow-pool.git"
     },
     "dependencies": {
         "3.npm": "^1.0.0",
@@ -59,7 +60,7 @@
         "ls": "^0.2.1",
         "mime-types": "^2.1.21",
         "moment": "^2.23.0",
-        "multi-hashing": "git+https://github.com/zone117x/node-multi-hashing.git",
+        "multi-hashing": "git+https://github.com/rvnminers-A-and-N/meowpow-hasher.git",
         "mysql": "^2.16.0",
         "newrelic": "^5.1.0",
         "node-json-minify": "^1.0.0",
@@ -73,7 +74,7 @@
         "sha3": "^2.1.4",
         "sma": "^0.1.1",
         "sshpk": "^1.15.2",
-        "stratum-pool": "git+https://github.com/tweetyf/kawpow-stratum-pool.git",
+        "stratum-pool": "git+https://github.com/rvnminers-A-and-N/meowpow-stratum-pool.git",
         "winston": "^3.2.1",
         "winston-daily-rotate-file": "^3.5.1",
         "winston-transport": "^4.3.0",
