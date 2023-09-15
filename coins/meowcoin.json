@@ -1,0 +1,16 @@
+{
+    "name": "meowcoin",    
+    "symbol": "MEWC",    
+    "algorithm": "meowpow",
+    
+    "wallet": "https://github.com/RavenPJustAResearcher/Meowcoin/releases",
+
+    "explorer":"https://explorer.mewccrypto.com/",
+    
+    "explorerGetBlockJSON": "https://explorer.mewccrypto.com/api/getrawtransaction?decrypt=1&txid=",
+    "explorerGetBlock": "https://explorer.mewccrypto.com/block/",
+    "explorerGetTX": "https://explorer.mewccrypto.com/tx/",
+    
+    "blockTime": 60,
+    "blockChange": 1   
+}

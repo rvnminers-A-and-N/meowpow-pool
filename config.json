@@ -1,6 +1,6 @@
 {
     
-    "poolname": "Hive Coin Pool",
+    "poolname": "Meowcoin Pool",
     
     "devmode": false,
     "devmodePayMinimim": 0.25,
@@ -12,16 +12,16 @@
     "ipv6bits": 16,
     "poolwarningmsg": "",
     
-    "defaultCoin": "hivecoin",
+    "defaultCoin": "meowcoincoin",
     
-    "poollogo": "/static/icons/hivecoin.png",
+    "poollogo": "/static/icons/meowcoin.png",
     
     "discordtwitterfacebook": "",
     
-    "pagetitle": "Hive Coin Pool - 0% Fees Promo",
-    "pageauthor": "Hive project",
+    "pagetitle": "Meowcoin Pool - 0% Fees Promo",
+    "pageauthor": "Alpha",
     "pagedesc": "A reliable, 0% fee, easy to use mining pool for cryptocurrency! No matter your experience with mining cryptocurrency, we make it easy! Get started mining today!",
-    "pagekeywds": "GPU,CPU,Hash,Hashrate,Cryptocurrency,Crypto,Mining,Pool,Bitcoin,Hive,Hivecoin,Wavi,Wavicoin,Dixicoin,Dixi,QBic,QBicCoin,Easy,Simple,How,To",
+    "pagekeywds": "GPU,CPU,Hash,Hashrate,Cryptocurrency,Crypto,Mining,Pool,Bitcoin,Hive,Hivecoin,Meowcoin,Wavi,Wavicoin,Dixicoin,Dixi,QBic,QBicCoin,Easy,Simple,How,To",
 
     "btcdonations": "",
     "ltcdonations": "",
@@ -65,11 +65,11 @@
         "sslenabled": false,
         "sslforced": false,
         "host": "0.0.0.0",
-        "port": 8080,
+        "port": 80,
         "sslport": 443,
-        "sslkey": "~/nomp-kawpow-pool/certs/privkey.pem",
-        "sslcert": "~/nomp-kawpow-pool/certs/fullchain.pem",
-        "stratumHost": "192.168.100.105",
+        "sslkey": "~/meowpow-pool/certs/privkey.pem",
+        "sslcert": "~/meowpow-pool/certs/fullchain.pem",
+        "stratumHost": "mine.pool.meowcoin.com",
         "stats": {
             "updateInterval": 30,
             "historicalRetention": 172800,

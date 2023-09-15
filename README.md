@@ -25,8 +25,8 @@ This is opensource mining pool for MeowCoin, Please visit [MeowCoin](https://www
 | Project | Link |
 | ------------- | ------------- |
 | [MeowPoWNOMP](https://github.com/rvnminers-A-and-N/meowpow-pool) | https://github.com/rvnminers-A-and-N/meowpow-pool |
-| [Stratum Pool](https://github.com/tweetyf/meowpow-stratum-pool.git) | https://github.com/tweetyf/meowpow-stratum-pool.git |
-| [Node Multihashing](https://github.com/zone117x/node-multi-hashing.git) | https://github.com/zone117x/node-multi-hashing.git |
+| [Stratum Pool](https://github.com/rvnminers-A-and-N/meowpow-stratum-pool.git) | https://github.com/rvnminers-A-and-N/meowpow-stratum-pool.git |
+| [Node Multihashing](https://github.com/rvnminers-A-and-N/meowpow-hasher.git) | https://github.com/rvnminers-A-and-N/meowpow-hasher.git |
 
 -------
 ### Requirements
@@ -74,24 +74,25 @@ This is opensource mining pool for MeowCoin, Please visit [MeowCoin](https://www
     echo "rpcpassword=pass1" >> ~/.raven/raven.conf
     echo "listen=1" >> ~/.raven/raven.conf
     echo "daemon=1" >> ~/.raven/raven.conf
-    ./ravend
-    ./raven-cli getnewaddress
+    ./meowcoind
+    ./meowcoin-cli getnewaddress
 
 Example output: HNRMPAYzdBHGWgK7CjSFByuUcufCHSST7r - it is the address of your pool, you need to remember it and specify it in the configuration file pool_configs/meowcoin.json.
     
-    meow-cli getaddressesbyaccount ""
+    meowcoin-cli getaddressesbyaccount ""
     
 Information about pool wallet address.
     
-    meow-cli getwalletinfo
+    meowcoin-cli getwalletinfo
     
 Get more information.
 
-    meow-cli getblockcount
+    meowcoin-cli getblockcount
     
 Information about synchronization of blocks in the main chain.
 
-    meow-cli help
+    meowcoin-cli help
+
 Other helpfull commands.
 
 -------
@@ -116,7 +117,7 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
 ```javascript
 {
     
-    "poolname": "Meow Coin Pool",
+    "poolname": "Meowcoin Pool",
     
     "devmode": false,
     "devmodePayMinimim": 0.25,
@@ -134,7 +135,7 @@ Change "stratumHost": "192.168.0.200", to your IP or DNS in file config.json:
     
     "discordtwitterfacebook": "",
     
-    "pagetitle": "Meow Coin Pool - 0% Fees Promo",
+    "pagetitle": "Meowcoin Pool - 0% Fees Promo",
     "pageauthor": "Meow project",
     "pagedesc": "A reliable, 0% fee, easy to use mining pool for cryptocurrency! No matter your experience with mining cryptocurrency, we make it easy! Get started mining today!",
     "pagekeywds": "GPU,CPU,Hash,Hashrate,Cryptocurrency,Crypto,Mining,Pool,Bitcoin,Meow,Meowcoin,Wavi,Wavicoin,Dixicoin,Dixi,QBic,QBicCoin,Easy,Simple,How,To",
